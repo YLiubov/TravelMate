@@ -6,7 +6,15 @@ their Danish and English descriptions.
 
 ## Run locally
 
-Start the API:
+This repository only contains the `frontend/`. The API (`backend/`) is a
+separate project provided by the teacher and is **not** included here —
+clone it on its own, next to this repository's `frontend/` folder:
+
+```bash
+git clone https://github.com/Webudvikler-TechCollege/travelmate-api-ts-sqlite.git backend
+```
+
+Then set up and start the API:
 
 ```bash
 cd backend
@@ -14,6 +22,12 @@ npm install
 npx prisma generate
 npx prisma db push
 npm run seed
+```
+
+Add `PORT=3001` to `backend/.env` (port 3000 is reserved for another
+project), then start it:
+
+```bash
 npm run dev
 ```
 
